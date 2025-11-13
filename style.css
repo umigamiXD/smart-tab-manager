@@ -1,0 +1,227 @@
+/* General Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  color: #1f2937;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.primary-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background-color: #1e40af;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.secondary-btn {
+  width: 100%;
+  background-color: #fbbf24;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.secondary-btn:hover {
+  background-color: #f59e0b;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Session cards */
+.session {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-top: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.session:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Session Header */
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.session-header span {
+  font-weight: 600;
+  color: #111827;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Buttons inside session */
+.session-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.session-buttons button {
+  width: auto;
+  padding: 5px 9px;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.restore {
+  background-color: #10b981;
+  color: white;
+}
+
+.restore:hover {
+  background-color: #059669;
+}
+
+.delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #b91c1c;
+}
+
+.rename {
+  background-color: #6366f1;
+  color: white;
+}
+
+.rename:hover {
+  background-color: #4338ca;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Tab List */
+.tab-list {
+  margin-top: 8px;
+  margin-left: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #e5e7eb;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tab-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+
+.tab-item:hover {
+  background: #eef2ff;
+}
+
+.tab-item a {
+  color: #2563eb;
+  text-decoration: none;
+  flex: 1;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.tab-item a:hover {
+  text-decoration: underline;
+}
+
+.delete-tab {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.delete-tab:hover {
+  background-color: #b91c1c;
+}
+
+
+.inactive-control {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.inactive-control input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
