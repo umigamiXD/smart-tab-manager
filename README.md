@@ -25,6 +25,6 @@ A Chrome extension to save, restore, rename, and manage browser sessions — and
 ---
 
 ## 🧰 Installation
-1. **Download or clone** this repo:
+**Download or clone** this repo:
    ```bash
    git clone https://github.com/umigamiXD/smart-tab-manager.git
