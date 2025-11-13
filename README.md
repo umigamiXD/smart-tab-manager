@@ -1,10 +1,10 @@
-# 🧠 Smart Session & Tab Manager (Chrome Extension)
+# Smart Session & Tab Manager
 
 A Chrome extension to save, restore, rename, and manage browser sessions — and automatically close inactive tabs.
 
 ---
 
-## 🚀 Features
+## Features
 - Save all open tabs as a named session
 - Restore, rename, or delete saved sessions
 - Close inactive tabs after a set time
@@ -12,7 +12,7 @@ A Chrome extension to save, restore, rename, and manage browser sessions — and
 
 ---
 
-## 🧩 Files
+## Files
 | File | Purpose |
 |------|----------|
 | `manifest.json` | Chrome configuration file |
@@ -24,7 +24,7 @@ A Chrome extension to save, restore, rename, and manage browser sessions — and
 
 ---
 
-## 🧰 Installation
+## Installation
 **Download or clone** this repo:
    ```bash
    git clone https://github.com/umigamiXD/smart-tab-manager.git
