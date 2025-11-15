@@ -1,4 +1,3 @@
-/* General Body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f4f8;
@@ -8,12 +7,10 @@ body {
   color: #1f2937;
 }
 
-/* Container */
 .container {
   padding: 20px;
 }
 
-/* Headings */
 h1 {
   font-size: 20px;
   text-align: center;
@@ -30,7 +27,6 @@ h2 {
   padding-bottom: 4px;
 }
 
-/* Buttons */
 button {
   cursor: pointer;
   border: none;
@@ -65,7 +61,6 @@ button {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* Session cards */
 .session {
   background: #ffffff;
   border-radius: 12px;
@@ -83,7 +78,6 @@ button {
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Session Header */
 .session-header {
   display: flex;
   justify-content: space-between;
@@ -100,7 +94,6 @@ button {
   white-space: nowrap;
 }
 
-/* Buttons inside session */
 .session-buttons {
   display: flex;
   gap: 6px;
@@ -155,7 +148,6 @@ button {
   text-decoration: underline;
 }
 
-/* Dropdown Tab List */
 .tab-list {
   margin-top: 8px;
   margin-left: 5px;
@@ -224,4 +216,5 @@ button {
   padding: 6px;
   border-radius: 6px;
   border: 1px solid #d1d5db;
+
 }
