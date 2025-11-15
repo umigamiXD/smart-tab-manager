@@ -1,6 +1,5 @@
 let tabTimes = {};
 
-// Track last accessed time
 chrome.tabs.onActivated.addListener(activeInfo => {
   const now = Date.now();
   tabTimes[activeInfo.tabId] = now;
@@ -13,15 +12,13 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-// Remove tab info when a tab is closed
 chrome.tabs.onRemoved.addListener(tabId => {
   delete tabTimes[tabId];
 });
 
-// Listen for messages from popup.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getIdleTabs") {
-    const threshold = request.threshold; // in milliseconds
+    const threshold = request.threshold;
     chrome.tabs.query({}, tabs => {
       const now = Date.now();
       const idleTabs = tabs.filter(tab => {
@@ -30,6 +27,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       });
       sendResponse({ idleTabs });
     });
-    return true; // keep response channel open
+    return true;
   }
 });
+
