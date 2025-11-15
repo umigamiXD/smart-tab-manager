@@ -1,7 +1,6 @@
 const sessionsDiv = document.getElementById("sessions");
 const inactiveInput = document.getElementById("inactiveTime");
 
-// Save current window tabs as a session
 document.getElementById("saveSession").addEventListener("click", async () => {
   const tabs = await chrome.tabs.query({ currentWindow: true });
   const urls = tabs.map(t => ({ title: t.title, url: t.url }));
@@ -16,7 +15,6 @@ document.getElementById("saveSession").addEventListener("click", async () => {
   loadSessions();
 });
 
-// Load sessions (same as v1.1)
 async function loadSessions() {
   sessionsDiv.innerHTML = "";
   const { sessions } = await chrome.storage.local.get("sessions");
@@ -72,7 +70,6 @@ async function loadSessions() {
     sessionsDiv.appendChild(sessionDiv);
   });
 
-  // Toggle dropdown
   document.querySelectorAll(".toggle-btn").forEach(btn => {
     btn.addEventListener("click", e => {
       const sessionDiv = e.target.closest(".session");
@@ -83,7 +80,6 @@ async function loadSessions() {
     });
   });
 
-  // Restore, delete, rename, delete individual tab (same as v1.1)
   document.querySelectorAll(".restore").forEach(btn => {
     btn.addEventListener("click", async e => {
       const i = e.target.dataset.index;
@@ -127,14 +123,13 @@ async function loadSessions() {
   });
 }
 
-// Close inactive tabs based on user-set threshold
 document.getElementById("cleanTabs").addEventListener("click", async () => {
   const minutes = parseInt(inactiveInput.value);
   if (isNaN(minutes) || minutes <= 0) {
     alert("Please enter a valid number of minutes.");
     return;
   }
-  const threshold = minutes * 60 * 1000; // convert minutes to ms
+  const threshold = minutes * 60 * 1000;
 
   chrome.runtime.sendMessage({ action: "getIdleTabs", threshold }, response => {
     const idleTabs = response.idleTabs;
@@ -144,3 +139,4 @@ document.getElementById("cleanTabs").addEventListener("click", async () => {
 });
 
 loadSessions();
+
